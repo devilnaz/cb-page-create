@@ -3,27 +3,4 @@
 
 .full-create {
   margin: 0;
-  // position: relative;
-  &__content {
-  max-width: 660px;
-  width: 100%;
-  background: $main;
-  height: 2000px;
-  margin: 0 auto;
-  }
-}
-
-.test {
-  height: 500px;
-  padding: 25px 0;
-  background-color: $yellow;
-}
-.test2 {
-  background: url('../img/Counter.svg') no-repeat;
-  height: 50px;
-  // width: 1000px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
