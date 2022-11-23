@@ -3,4 +3,90 @@
 
 .full-create {
   margin: 0;
+  &__container {
+    max-width: 1360px;
+    width: 95%;
+    margin: 0 auto;
+  }
+  &__container:not(:first-child) {
+    
+    background-color: $green;
+  }
+  &__header {
+    margin-top: 88px;
+  }
+}
+
+.create-account {
+  display: flex;
+  &__form {
+    flex-basis: 40.294%;
+    max-width: 548px;
+  }
+  &__features {
+    flex-basis: 31.177%;
+    max-width: 424px;
+    padding: 4.7%;
+    margin-left: 10.8%;
+  }
+}
+
+.create-block {
+  font: 400 16px 'Rubik';
+  color: $grey;
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.750em;
+    line-height: 1.300em;
+    color: $black;
+    &_higlight {
+      color: $main;
+    }
+  }
+  &__text {
+    margin: 1.333em 0 0;
+    font-size: 1.125em;
+    line-height: 1.667em;
+  }
+  &__form {
+    margin-top: 4.000em;
+    max-width: 318px;
+  }
+}
+
+.form-create {
+  font-size: 1em;
+  &__input {
+    font: 400 1.125em/1.667em 'Rubik';
+    padding: 0.500em 1.333em;
+    width: 100%;
+    box-sizing: border-box;
+    border: solid 1px $light-grey;
+    border-radius: 0.444em;
+    margin-top: 0.889em;
+  }
+  &__input:first-child {
+    margin-top: 0;
+  }
+  &__input:focus {
+    outline: 0;
+  }
+  &__btn {
+    font: 1em/1.362em 'open_sanssemibold';
+    padding: 0.813em;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid $main;
+    color: $white;
+    border-radius: 0.500em;
+    background-color: $main;
+    margin-top: 1em;
+    cursor: pointer;
+  }
+  &__agree {
+    margin: 1.846em 0 0;
+    font: 0.813em/1.400em 'open_sansregular';
+    letter-spacing: 0.019em;
+  }
 }
