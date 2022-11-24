@@ -56,13 +56,10 @@
 .full-create__container {
   max-width: 1360px;
   width: 95%;
-  margin: 0 auto;
+  margin: 88px auto 0;
 }
-.full-create__container:not(:first-child) {
+.full-create__container:nth-child(n+4) {
   background-color: #27AE60;
-}
-.full-create__header {
-  margin-top: 88px;
 }
 
 .create-account {
@@ -228,4 +225,96 @@
   font-size: 0.813em;
   line-height: 1.7em;
   color: #4A5568;
+}
+
+.company {
+  font: 1rem "Rubik";
+  color: #4A5568;
+  padding: 4em 0 7.313em;
+}
+.company__title {
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.4em;
+  text-align: center;
+}
+.company__slider {
+  margin-top: 5em;
+  text-align: center;
+}
+.company__slide {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4em;
+}
+.company__slide:last-child {
+  margin-right: 0;
+}
+
+.accordion-module {
+  font-size: 1rem;
+  color: #1A202C;
+}
+.accordion-module__title {
+  font: 500 2.75em/1.364em "Rubik";
+  margin: 0;
+  text-align: center;
+}
+.accordion-module__inner {
+  margin-top: 4em;
+}
+.accordion-module__card {
+  font-size: 1rem;
+  border: 1px solid #EAEAEA;
+  border-radius: 0.625em;
+  margin-top: 1.25em;
+}
+.accordion-module__card:first-child {
+  margin-top: 0;
+}
+.accordion-module__head {
+  border-bottom: 1px solid #EAEAEA;
+  padding: 0 4.25em 0 4.25em;
+  position: relative;
+}
+.accordion-module__head:hover {
+  cursor: pointer;
+}
+.accordion-module__title-head {
+  margin: 0;
+  font: 1em/1.362em "open_sanssemibold";
+  padding: 1em 0;
+}
+.accordion-module__disclosure {
+  height: 1.75em;
+  width: 1.75em;
+  border-radius: 50%;
+  background-color: #F2F5F9;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 1.313em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.accordion-module__img-disclosure {
+  width: 0.963em;
+}
+.accordion-module__body {
+  color: #4A5568;
+}
+.accordion-module__body-inner {
+  padding: 1.688em 4.25em 2.5em;
+  max-width: 732px;
+  width: 100%;
+}
+.accordion-module__text-body {
+  font: 1.125em/1.362em "open_sansregular";
+}
+.accordion-module__text-body_link {
+  color: #E63756;
+}
+.accordion-module__text-body_link:hover {
+  text-decoration: none;
 }/*# sourceMappingURL=full-create.css.map */

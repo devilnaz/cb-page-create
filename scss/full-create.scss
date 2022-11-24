@@ -6,15 +6,11 @@
   &__container {
     max-width: 1360px;
     width: 95%;
-    margin: 0 auto;
+    margin: 88px auto 0;
   }
-  &__container:not(:first-child) {
-    
+  &__container:nth-child(n+4) {
     background-color: $green;
-  }
-  &__header {
-    margin-top: 88px;
-  }
+  } 
 }
 
 .create-account {
@@ -173,5 +169,97 @@
     font-size: 0.813em;
     line-height: 1.700em;
     color: $grey;
+  }
+}
+
+.company {
+  font: 1rem 'Rubik';
+  color: $grey;
+  padding: 4.000em 0 7.313em;
+  &__title {
+    font-size: 1.500em;
+    font-weight: 500;
+    line-height: 1.400em;
+    text-align: center;
+  }
+  &__slider {
+    margin-top: 5.000em;
+    text-align: center;
+  }
+  &__slide {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4.000em;
+  }
+  &__slide:last-child {
+    margin-right: 0;
+  }
+}
+
+.accordion-module {
+  font-size: 1rem;
+  color: $black;
+  &__title {
+    font: 500 2.750em/1.364em 'Rubik';
+    margin: 0;
+    text-align: center;
+  }
+  &__inner {
+    margin-top: 4.000em;
+  }
+  &__card {
+    font-size: 1rem;
+    border: 1px solid $light-grey;
+    border-radius: 0.625em;
+    margin-top: 1.250em;
+  }
+  &__card:first-child {
+    margin-top: 0;
+  }
+  &__head {
+    border-bottom: 1px solid $light-grey;
+    padding: 0 4.250em 0 4.250em;
+    position: relative;
+  }
+  &__head:hover {
+    cursor: pointer;
+  }
+  &__title-head {
+    margin: 0;
+    font: 1em/1.362em 'open_sanssemibold';
+    padding: 1em 0;
+  }
+  &__disclosure {
+    height: 1.750em;
+    width: 1.750em;
+    border-radius: 50%;
+    background-color: #F2F5F9;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 1.313em;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__img-disclosure {
+    width: 0.963em;
+  }
+  &__body {
+    color: $grey;
+  }
+  &__body-inner {
+    padding: 1.688em 4.250em 2.500em;
+    max-width: 732px;
+    width: 100%;
+  }
+  &__text-body {
+    font: 1.125em/1.362em 'open_sansregular';
+  }
+  &__text-body_link {
+    color: $main;
+  }
+  &__text-body_link:hover {
+    text-decoration: none;
   }
 }
