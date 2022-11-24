@@ -67,6 +67,7 @@
 
 .create-account {
   display: flex;
+  position: relative;
 }
 .create-account__form {
   flex-basis: 40.294%;
@@ -77,6 +78,14 @@
   max-width: 424px;
   padding: 4.7%;
   margin-left: 10.8%;
+}
+.create-account__counter {
+  position: absolute;
+  max-width: 191px;
+  width: 100%;
+  top: 0;
+  right: 0;
+  transform: translateY(-50%);
 }
 
 .create-block {
@@ -90,7 +99,7 @@
   line-height: 1.3em;
   color: #1A202C;
 }
-.create-block__title_higlight {
+.create-block__title_highlight {
   color: #E63756;
 }
 .create-block__text {
@@ -100,11 +109,13 @@
 }
 .create-block__form {
   margin-top: 4em;
-  max-width: 318px;
 }
 
 .form-create {
-  font-size: 1em;
+  font-size: 1rem;
+}
+.form-create__inner {
+  max-width: 318px;
 }
 .form-create__input {
   font: 400 1.125em/1.667em "Rubik";
@@ -114,12 +125,19 @@
   border: solid 1px #EAEAEA;
   border-radius: 0.444em;
   margin-top: 0.889em;
+  color: #1A202C;
 }
 .form-create__input:first-child {
   margin-top: 0;
 }
-.form-create__input:focus {
-  outline: 0;
+.form-create__input::-moz-placeholder {
+  color: rgb(102, 102, 102);
+}
+.form-create__input:-ms-input-placeholder {
+  color: rgb(102, 102, 102);
+}
+.form-create__input::placeholder {
+  color: rgb(102, 102, 102);
 }
 .form-create__btn {
   font: 1em/1.362em "open_sanssemibold";
@@ -137,4 +155,77 @@
   margin: 1.846em 0 0;
   font: 0.813em/1.4em "open_sansregular";
   letter-spacing: 0.019em;
+}
+
+.features-account {
+  font: 400 1rem "Rubik";
+  color: #1A202C;
+}
+.features-account__title {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.4em;
+}
+.features-account__title_highlight {
+  color: #E63756;
+}
+.features-account__table {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1.5em;
+}
+.features-account__cell {
+  font-size: 1.125em;
+  line-height: 1.667em;
+  padding-left: 1.889em;
+  position: relative;
+  vertical-align: middle;
+}
+.features-account__cell::before {
+  content: "";
+  height: 1.333em;
+  width: 1.333em;
+  background-image: url("../img/full-create/features-account_icon.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.features-account__text {
+  font-size: 1.125em;
+  line-height: 1.667em;
+  color: #4A5568;
+  margin: 1.778em 0 0;
+}
+
+.counter-account {
+  font: 400 1rem "Rubik";
+  box-shadow: 0 14.8px 24.39px rgba(28, 37, 44, 0.08);
+  background-color: #FFFFFF;
+  border-radius: 1.5em;
+}
+.counter-account__inner {
+  padding: 0.875em 1.438em;
+  text-align: center;
+}
+.counter-account__today {
+  margin: 0;
+  font-size: 1.25em;
+  line-height: 1.7em;
+  color: #FFB402;
+}
+.counter-account__total-count {
+  margin-top: 0.189em;
+  font-size: 2.313em;
+  line-height: 1em;
+  color: #E63756;
+}
+.counter-account__text {
+  margin: 0.077em 0 0;
+  font-size: 0.813em;
+  line-height: 1.7em;
+  color: #4A5568;
 }/*# sourceMappingURL=full-create.css.map */

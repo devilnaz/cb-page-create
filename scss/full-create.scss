@@ -19,6 +19,7 @@
 
 .create-account {
   display: flex;
+  position: relative;
   &__form {
     flex-basis: 40.294%;
     max-width: 548px;
@@ -28,6 +29,14 @@
     max-width: 424px;
     padding: 4.7%;
     margin-left: 10.8%;
+  }
+  &__counter {
+    position: absolute;
+    max-width: 191px;
+    width: 100%;
+    top: 0;
+    right: 0;
+    transform: translateY(-50%);
   }
 }
 
@@ -40,7 +49,7 @@
     font-size: 2.750em;
     line-height: 1.300em;
     color: $black;
-    &_higlight {
+    &_highlight {
       color: $main;
     }
   }
@@ -51,12 +60,14 @@
   }
   &__form {
     margin-top: 4.000em;
-    max-width: 318px;
   }
 }
 
 .form-create {
-  font-size: 1em;
+  font-size: 1rem;
+  &__inner {
+    max-width: 318px;
+  }
   &__input {
     font: 400 1.125em/1.667em 'Rubik';
     padding: 0.500em 1.333em;
@@ -65,12 +76,13 @@
     border: solid 1px $light-grey;
     border-radius: 0.444em;
     margin-top: 0.889em;
+    color: $black;
   }
   &__input:first-child {
     margin-top: 0;
   }
-  &__input:focus {
-    outline: 0;
+  &__input::placeholder {
+    color: rgba(102, 102, 102, 1);
   }
   &__btn {
     font: 1em/1.362em 'open_sanssemibold';
@@ -88,5 +100,78 @@
     margin: 1.846em 0 0;
     font: 0.813em/1.400em 'open_sansregular';
     letter-spacing: 0.019em;
+  }
+}
+
+.features-account {
+  font: 400 1rem 'Rubik';
+  color: $black;
+  &__title {
+    margin: 0;
+    font-size: 1.500em;
+    font-weight: 500;
+    line-height: 1.400em;
+    &_highlight {
+      color: $main;
+    }
+  }
+  &__table {
+    margin-top: 2.000em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.500em;
+  }
+  &__cell {
+    font-size: 1.125em;
+    line-height: 1.667em;
+    padding-left: 1.889em;
+    position: relative;
+    vertical-align: middle;
+  }
+  &__cell::before {
+    content: '';
+    height: 1.333em;
+    width: 1.333em;
+    background-image: url('../img/full-create/features-account_icon.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__text {
+    font-size: 1.125em;
+    line-height: 1.667em;
+    color: $grey;
+    margin: 1.778em 0 0;
+  }
+}
+
+.counter-account {
+  font: 400 1rem 'Rubik';
+  box-shadow: 0 14.8px 24.39px rgba(28, 37, 44, 0.08);
+  background-color: $white;
+  border-radius: 1.500em;
+  &__inner {
+    padding: 0.875em 1.438em;
+    text-align: center;
+  }
+  &__today {
+    margin: 0;
+    font-size: 1.250em;
+    line-height: 1.700em;
+    color: $yellow;
+  }
+  &__total-count {
+    margin-top: 0.189em;
+    font-size: 2.313em;
+    line-height: 1em;
+    color: $main;
+  }
+  &__text {
+    margin: 0.077em 0 0;
+    font-size: 0.813em;
+    line-height: 1.700em;
+    color: $grey;
   }
 }
