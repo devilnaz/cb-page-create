@@ -112,6 +112,12 @@
     font: 0.813em/1.400em 'open_sansregular';
     letter-spacing: 0.019em;
   }
+  &__link-file {
+    color: $grey;
+  }
+  &__link-file:hover {
+    text-decoration: none;
+  }
 }
 
 .features-account {

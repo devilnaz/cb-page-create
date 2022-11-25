@@ -166,6 +166,12 @@
   font: 0.813em/1.4em "open_sansregular";
   letter-spacing: 0.019em;
 }
+.form-create__link-file {
+  color: #4A5568;
+}
+.form-create__link-file:hover {
+  text-decoration: none;
+}
 
 .features-account {
   font: 400 1rem "Rubik";
@@ -198,6 +204,7 @@
   height: 1.333em;
   width: 1.333em;
   background-image: url("../img/full-create/features-account_icon.svg");
+  background-size: 100%;
   background-repeat: no-repeat;
   position: absolute;
   left: 0;
