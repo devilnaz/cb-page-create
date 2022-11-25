@@ -3,10 +3,28 @@
 
 .full-create {
   margin: 0;
+  &__main {
+  }
   &__container {
     max-width: 1360px;
     width: 95%;
     margin: 88px auto 0;
+  }
+  &__ground-inner {
+    position: relative;
+    overflow-x: hidden;
+  }
+  &__ground-header {
+    width: 2050px;
+    background-image: linear-gradient(to top, #F7FAFC, rgba(#F7FAFC, 0));
+    border-bottom-left-radius: 120% 28%;
+    border-bottom-right-radius: 120% 28%;
+    z-index: -1;
+    position: absolute;
+    top: -50px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -126,6 +144,7 @@
     height: 1.333em;
     width: 1.333em;
     background-image: url('../img/full-create/features-account_icon.svg');
+    background-size: 100%;
     background-repeat: no-repeat;
     position: absolute;
     left: 0;
@@ -178,6 +197,7 @@
     font-weight: 500;
     line-height: 1.400em;
     text-align: center;
+    margin: 0;
   }
   &__slider {
     margin-top: 5.000em;
@@ -270,6 +290,8 @@
   position: relative;
   &__inner {
     max-width: 490px;
+    position: relative;
+    z-index: 10;
   }
   &__title {
     margin: 0;
@@ -311,8 +333,9 @@
     left: 0;
     right: 0;
     background-image: url('../img/modules/try/try-caricature.png');
-    background-position: bottom right 74px;
+    background-position: bottom 35% right 4.625em;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 40.417% auto;
+    z-index: 5;
   }
 }

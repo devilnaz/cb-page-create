@@ -58,6 +58,22 @@
   width: 95%;
   margin: 88px auto 0;
 }
+.full-create__ground-inner {
+  position: relative;
+  overflow-x: hidden;
+}
+.full-create__ground-header {
+  width: 2050px;
+  background-image: linear-gradient(to top, #F7FAFC, rgba(247, 250, 252, 0));
+  border-bottom-left-radius: 120% 28%;
+  border-bottom-right-radius: 120% 28%;
+  z-index: -1;
+  position: absolute;
+  top: -50px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 .create-account {
   display: flex;
@@ -234,6 +250,7 @@
   font-weight: 500;
   line-height: 1.4em;
   text-align: center;
+  margin: 0;
 }
 .company__slider {
   margin-top: 5em;
@@ -326,6 +343,8 @@
 }
 .try-module__inner {
   max-width: 490px;
+  position: relative;
+  z-index: 10;
 }
 .try-module__title {
   margin: 0;
@@ -367,7 +386,8 @@
   left: 0;
   right: 0;
   background-image: url("../img/modules/try/try-caricature.png");
-  background-position: bottom right 74px;
+  background-position: bottom 35% right 4.625em;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 40.417% auto;
+  z-index: 5;
 }/*# sourceMappingURL=full-create.css.map */
