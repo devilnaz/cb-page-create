@@ -6,7 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Создать аккаунт</title>
   
+  
+  <link rel="stylesheet" href="./libs/itc-slider/itc-slider.css">
+  <script src="./libs/itc-slider/itc-slider.js" defer></script>
+  
   <link rel="stylesheet" href="./css/full-create.css">
+  <!-- для разработки, удалить -->
   <script src="https://code.jquery.com/jquery-3.6.2.js"></script>
 </head>
 <body class="full-create">
@@ -77,22 +82,48 @@
             <h2 class="company__title">
               Более 1000 персональных систем с 2009 года
             </h2>
-            <div class="company__slider">
-              <div class="company__slide">
-                <img src="./img/full-create/img-slide_1.png" alt="" class="company__img-slide">
+            <div class="itc-slider">
+              <div class="itc-slider__wrapper">
+                <div class="itc-slider__items">
+                  <div class="itc-slider__item">
+                    <!-- Контент 1 слайда -->
+                    <div class="company__wrapper-img-slide">
+                      <img src="./img/full-create/img-slide_1.png" alt="" class="company__img-slide">
+                    </div>
+                  </div>
+                  <div class="itc-slider__item">
+                    <!-- Контент 2 слайда -->
+                    <div class="company__wrapper-img-slide">
+                      <img src="./img/full-create/img-slide_2.png" alt="" class="company__img-slide">
+                    </div>
+                  </div>
+                  <div class="itc-slider__item">
+                    <!-- Контент 3 слайда -->
+                    <div class="company__wrapper-img-slide">
+                      <img src="./img/full-create/img-slide_3.png" alt="" class="company__img-slide">
+                    </div>
+                  </div>
+                  <div class="itc-slider__item">
+                    <!-- Контент 4 слайда -->
+                    <div class="company__wrapper-img-slide">
+                      <img src="./img/full-create/img-slide_4.png" alt="" class="company__img-slide">
+                    </div>
+                  </div>
+                  <div class="itc-slider__item">
+                    <!-- Контент 5 слайда -->
+                    <div class="company__wrapper-img-slide">
+                      <img src="./img/full-create/img-slide_5.png" alt="" class="company__img-slide">
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="company__slide">
-                <img src="./img/full-create/img-slide_2.png" alt="" class="company__img-slide">
-              </div>
-              <div class="company__slide">
-                <img src="./img/full-create/img-slide_3.png" alt="" class="company__img-slide">
-              </div>
-              <div class="company__slide">
-                <img src="./img/full-create/img-slide_4.png" alt="" class="company__img-slide">
-              </div>
-              <div class="company__slide">
-                <img src="./img/full-create/img-slide_5.png" alt="" class="company__img-slide">
-              </div>
+              <ol class="itc-slider__indicators">
+                <li class="itc-slider__indicator" data-slide-to="0"></li>
+                <li class="itc-slider__indicator" data-slide-to="1"></li>
+                <li class="itc-slider__indicator" data-slide-to="2"></li>
+                <li class="itc-slider__indicator" data-slide-to="3"></li>
+                <li class="itc-slider__indicator" data-slide-to="4"></li>
+              </ol>
             </div>
           </div>
         </div>
@@ -121,7 +152,7 @@
             </div>
             <div class="accordion-module__card">
               <div class="accordion-module__head" data-name="head">
-                <h4 class="accordion-module__title-head">Чем отличается аккаунт от лицензии?</h4>
+                <h4 class="accordion-module__title-head">Что с безопасностью и сохранностью данных?</h4>
                 <div class="accordion-module__disclosure">
                   <img class="accordion-module__img-disclosure" src="./img/modules/accordion/accordion_plus.svg" alt="icon: plus">
                 </div>
@@ -136,7 +167,52 @@
             </div>
             <div class="accordion-module__card">
               <div class="accordion-module__head" data-name="head">
-                <h4 class="accordion-module__title-head">Чем отличается аккаунт от лицензии?</h4>
+                <h4 class="accordion-module__title-head">Что такое аккаунт?</h4>
+                <div class="accordion-module__disclosure">
+                  <img class="accordion-module__img-disclosure" src="./img/modules/accordion/accordion_plus.svg" alt="icon: plus">
+                </div>
+              </div>
+              <div class="accordion-module__body" id="js_acc" data-name="body">
+                <div class="accordion-module__body-inner">
+                  <p class="accordion-module__text-body">
+                    Облачный аккаунт – это наиболее быстрое и удобное начало работы с программой. Если вы захотите разместить программу на своем сервере, вам будет необходимо купить лицензию. Подробнее о различиях аккаунта и лицензии вы можете узнать из <a href="#" class="accordion-module__text-body_link">таблицы сравнения версий.</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-module__card">
+              <div class="accordion-module__head" data-name="head">
+                <h4 class="accordion-module__title-head">На каких серверах размещаются аккаунты?</h4>
+                <div class="accordion-module__disclosure">
+                  <img class="accordion-module__img-disclosure" src="./img/modules/accordion/accordion_plus.svg" alt="icon: plus">
+                </div>
+              </div>
+              <div class="accordion-module__body" id="js_acc" data-name="body">
+                <div class="accordion-module__body-inner">
+                  <p class="accordion-module__text-body">
+                    Облачный аккаунт – это наиболее быстрое и удобное начало работы с программой. Если вы захотите разместить программу на своем сервере, вам будет необходимо купить лицензию. Подробнее о различиях аккаунта и лицензии вы можете узнать из <a href="#" class="accordion-module__text-body_link">таблицы сравнения версий.</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-module__card">
+              <div class="accordion-module__head" data-name="head">
+                <h4 class="accordion-module__title-head">Если я захочу купить лицензию для установки на собственном сервере, как перенести данные?</h4>
+                <div class="accordion-module__disclosure">
+                  <img class="accordion-module__img-disclosure" src="./img/modules/accordion/accordion_plus.svg" alt="icon: plus">
+                </div>
+              </div>
+              <div class="accordion-module__body" id="js_acc" data-name="body">
+                <div class="accordion-module__body-inner">
+                  <p class="accordion-module__text-body">
+                    Облачный аккаунт – это наиболее быстрое и удобное начало работы с программой. Если вы захотите разместить программу на своем сервере, вам будет необходимо купить лицензию. Подробнее о различиях аккаунта и лицензии вы можете узнать из <a href="#" class="accordion-module__text-body_link">таблицы сравнения версий.</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-module__card">
+              <div class="accordion-module__head" data-name="head">
+                <h4 class="accordion-module__title-head">При переходе на платный аккаунт сохранятся ли данные, которые я введу?</h4>
                 <div class="accordion-module__disclosure">
                   <img class="accordion-module__img-disclosure" src="./img/modules/accordion/accordion_plus.svg" alt="icon: plus">
                 </div>
@@ -173,5 +249,6 @@
   </main>
   
   <script src="./js/accordion-module.js"></script>
+  <script src="./js/full-create.js"></script>
 </body>
 </html>

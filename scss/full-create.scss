@@ -1,5 +1,9 @@
 @import "modules/fonts-standart";
 @import "modules/colors";
+@import "modules/calculations";
+
+// default font-size
+$browser-font-size: 16;
 
 .full-create {
   margin: 0;
@@ -9,6 +13,9 @@
     max-width: 1360px;
     width: 95%;
     margin: 88px auto 0;
+    @media (max-width: 768px) {
+      margin-top: em(64);
+    }
   }
   &__ground-inner {
     position: relative;
@@ -31,15 +38,37 @@
 .create-account {
   display: flex;
   position: relative;
+  @media (max-width: 992px) {
+    flex-direction: column;
+    align-items: center;
+  }
   &__form {
     flex-basis: 40.294%;
     max-width: 548px;
+    margin-right: 10.8%;
+    @media (max-width: 1200px) {
+      flex-basis: 52.294%;
+      margin-right: 4.8%;
+    }
+    @media (max-width: 992px) {
+      margin-right: 0;
+      flex-basis: auto;
+    }
   }
   &__features {
     flex-basis: 31.177%;
     max-width: 424px;
     padding: 4.7%;
-    margin-left: 10.8%;
+    @media (max-width: 1200px) {
+      flex-grow: 1;
+    }
+    @media (max-width: 992px) {
+      flex-grow: initial;
+      flex-basis: auto;
+      max-width: 548px;
+      padding: 0;
+      margin-top: 88px;
+    }
   }
   &__counter {
     position: absolute;
@@ -48,6 +77,10 @@
     top: 0;
     right: 0;
     transform: translateY(-50%);
+    @media (max-width: 992px) {
+      display: none;
+      visibility: hidden;
+    }
   }
 }
 
@@ -63,14 +96,30 @@
     &_highlight {
       color: $main;
     }
+    @media (max-width: 992px) {
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      @include em(25, 29);
+    }
   }
   &__text {
     margin: 1.333em 0 0;
     font-size: 1.125em;
     line-height: 1.667em;
+    @media (max-width: 992px) {
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      @include em(16, 27);
+      margin-top: em(16);
+    }
   }
   &__form {
     margin-top: 4.000em;
+    @media (max-width: 768px) {
+      margin-top: em(40);
+    }
   }
 }
 
@@ -78,6 +127,9 @@
   font-size: 1rem;
   &__inner {
     max-width: 318px;
+    @media (max-width: 992px) {
+      max-width: 100%;
+    }
   }
   &__input {
     font: 400 1.125em/1.667em 'Rubik';
@@ -88,12 +140,15 @@
     border-radius: 0.444em;
     margin-top: 0.889em;
     color: $black;
+    @media (max-width: 768px) {
+      
+    }
   }
   &__input:first-child {
     margin-top: 0;
   }
   &__input::placeholder {
-    color: rgba(102, 102, 102, 1);
+    color: rgba($black, .4);
   }
   &__btn {
     font: 1em/1.362em 'open_sanssemibold';
@@ -131,12 +186,19 @@
     &_highlight {
       color: $main;
     }
+    @media (max-width: 992px) {
+      text-align: center;
+    }
   }
   &__table {
     margin-top: 2.000em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 1.500em;
+    @media (max-width: 768px) {
+      margin-top: em(24);
+      row-gap: 1em;
+    }
   }
   &__cell {
     font-size: 1.125em;
@@ -144,6 +206,9 @@
     padding-left: 1.889em;
     position: relative;
     vertical-align: middle;
+    @media (max-width: 768px) {
+      @include em(16, 22.4);
+    }
   }
   &__cell::before {
     content: '';
@@ -162,6 +227,13 @@
     line-height: 1.667em;
     color: $grey;
     margin: 1.778em 0 0;
+    @media (max-width: 992px) {
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      margin-top: em(24);
+      @include em(16, 22.4);
+    }
   }
 }
 
@@ -198,6 +270,9 @@
   font: 1rem 'Rubik';
   color: $grey;
   padding: 4.000em 0 7.313em;
+  @media (max-width: 768px) {
+    padding-bottom: em(32);
+  }
   &__title {
     font-size: 1.500em;
     font-weight: 500;
@@ -226,9 +301,15 @@
     font: 500 2.750em/1.364em 'Rubik';
     margin: 0;
     text-align: center;
+    @media (max-width: 768px) {
+      @include em(24, 33.6);
+    }
   }
   &__inner {
     margin-top: 4.000em;
+    @media (max-width: 768px) {
+      margin-top: em(32);
+    }
   }
   &__card {
     font-size: 1rem;
@@ -240,9 +321,11 @@
     margin-top: 0;
   }
   &__head {
-    // border-bottom: 1px solid $light-grey;
     padding: 0 4.250em 0 4.250em;
     position: relative;
+    @media (max-width: 768px) {
+      padding-left: em(18);
+    }
   }
   &__head:hover {
     cursor: pointer;
@@ -251,6 +334,9 @@
     margin: 0;
     font: 1em/1.362em 'open_sanssemibold';
     padding: 1em 0;
+    @media (max-width: 768px) {
+      @include em(14, 19.07);
+    }
   }
   &__disclosure {
     height: 1.750em;
@@ -280,9 +366,20 @@
     padding: 1.688em 4.250em 2.500em;
     max-width: 732px;
     width: 100%;
+    box-sizing: border-box;
+    @media (max-width: 768px) {
+      padding-left: em(18);
+      padding-right: em(20);
+      padding-top: 1.088em;
+      padding-bottom: 1.6em;
+    }
   }
   &__text-body {
+    margin: 0;
     font: 1.125em/1.362em 'open_sansregular';
+    @media (max-width: 768px) {
+      @include em(16, 22.4);
+    }
   }
   &__text-body_link {
     color: $main;
@@ -348,5 +445,73 @@
     background-repeat: no-repeat;
     background-size: 40.417% auto;
     z-index: 5;
+  }
+}
+
+// Слайдер
+.itc-slider {
+  margin-top: 83px;
+  &__items {
+    justify-content: center;
+    @media (max-width: 576px) {
+      justify-content: initial;
+    }
+  }
+  &__item {
+    flex: none;
+    max-width: none;
+    @media (max-width: 992px) {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+    @media (max-width: 576px) {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+  }
+  &__indicators {
+    transform: translateY(100%);
+    bottom: -9px;
+    display: none;
+    @media (max-width: 992px) {
+      display: flex;
+    }
+  }
+  &__indicator {
+    background-color: #CBD5E0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-right: 0px;
+    margin-left: 0px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+  }
+  &__indicator_active {
+    background-color: $main;
+  }
+  & .company {
+    &__wrapper-img-slide {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      margin-left: 32px;
+      margin-right: 32px;
+      @media (max-width: 992px) {
+        margin-left: 5%;
+        margin-right: 5%;
+        border: 1px solid #DEDEDE;
+        box-sizing: border-box;
+        border-radius: 9px;
+        padding: 10px 20px;
+        min-height: 196px;
+      }
+    }
+    &__img-slide {
+      @media (max-width: 992px) {
+        max-width: 100%;
+      }
+    }
   }
 }
