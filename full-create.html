@@ -7,6 +7,7 @@
   <title>Создать аккаунт</title>
   
   <link rel="stylesheet" href="./css/full-create.css">
+  <script src="https://code.jquery.com/jquery-3.6.2.js"></script>
 </head>
 <body class="full-create">
   
@@ -100,17 +101,17 @@
     </div>
     <div class="full-create__container">
       <div class="full-create__questions">
-        <div class="accordion-module">
+        <div id="accordion_questions" class="accordion-module">
           <h3 class="accordion-module__title">Часто задаваемые вопросы</h3>
           <div class="accordion-module__inner">
             <div class="accordion-module__card">
-              <div class="accordion-module__head">
+              <div class="accordion-module__head" data-name="head">
                 <h4 class="accordion-module__title-head">Чем отличается аккаунт от лицензии?</h4>
                 <div class="accordion-module__disclosure">
-                  <img class="accordion-module__img-disclosure" src="./img/modules/accordion/accordion_minus.svg" alt="icon: plus">
+                  <img class="accordion-module__img-disclosure" src="./img/modules/accordion/accordion_plus.svg" alt="icon: plus">
                 </div>
               </div>
-              <div class="accordion-module__body">
+              <div class="accordion-module__body"  data-name="body">
                 <div class="accordion-module__body-inner">
                   <p class="accordion-module__text-body">
                     Облачный аккаунт – это наиболее быстрое и удобное начало работы с программой. Если вы захотите разместить программу на своем сервере, вам будет необходимо купить лицензию. Подробнее о различиях аккаунта и лицензии вы можете узнать из <a href="#" class="accordion-module__text-body_link">таблицы сравнения версий.</a>
@@ -119,13 +120,33 @@
               </div>
             </div>
             <div class="accordion-module__card">
-              <div class="accordion-module__head">
+              <div class="accordion-module__head" data-name="head">
                 <h4 class="accordion-module__title-head">Чем отличается аккаунт от лицензии?</h4>
                 <div class="accordion-module__disclosure">
                   <img class="accordion-module__img-disclosure" src="./img/modules/accordion/accordion_plus.svg" alt="icon: plus">
                 </div>
               </div>
-              <div class="accordion-module__body">
+              <div class="accordion-module__body" id="js_acc" data-name="body">
+                <div class="accordion-module__body-inner">
+                  <p class="accordion-module__text-body">
+                    Облачный аккаунт – это наиболее быстрое и удобное начало работы с программой. Если вы захотите разместить программу на своем сервере, вам будет необходимо купить лицензию. Подробнее о различиях аккаунта и лицензии вы можете узнать из <a href="#" class="accordion-module__text-body_link">таблицы сравнения версий.</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-module__card">
+              <div class="accordion-module__head" data-name="head">
+                <h4 class="accordion-module__title-head">Чем отличается аккаунт от лицензии?</h4>
+                <div class="accordion-module__disclosure">
+                  <img class="accordion-module__img-disclosure" src="./img/modules/accordion/accordion_plus.svg" alt="icon: plus">
+                </div>
+              </div>
+              <div class="accordion-module__body" id="js_acc" data-name="body">
+                <div class="accordion-module__body-inner">
+                  <p class="accordion-module__text-body">
+                    Облачный аккаунт – это наиболее быстрое и удобное начало работы с программой. Если вы захотите разместить программу на своем сервере, вам будет необходимо купить лицензию. Подробнее о различиях аккаунта и лицензии вы можете узнать из <a href="#" class="accordion-module__text-body_link">таблицы сравнения версий.</a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -151,5 +172,6 @@
     </div>
   </main>
   
+  <script src="./js/accordion-module.js"></script>
 </body>
 </html>

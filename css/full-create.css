@@ -294,7 +294,6 @@
   margin-top: 0;
 }
 .accordion-module__head {
-  border-bottom: 1px solid #EAEAEA;
   padding: 0 4.25em 0 4.25em;
   position: relative;
 }
@@ -324,6 +323,11 @@
 }
 .accordion-module__body {
   color: #4A5568;
+}
+.accordion-module__body[data-name=body] {
+  transition: all 0.3s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
 }
 .accordion-module__body-inner {
   padding: 1.688em 4.25em 2.5em;

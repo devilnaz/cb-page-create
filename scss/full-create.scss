@@ -240,7 +240,7 @@
     margin-top: 0;
   }
   &__head {
-    border-bottom: 1px solid $light-grey;
+    // border-bottom: 1px solid $light-grey;
     padding: 0 4.250em 0 4.250em;
     position: relative;
   }
@@ -270,6 +270,11 @@
   }
   &__body {
     color: $grey;
+  }
+  &__body[data-name="body"] {
+    transition: all 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
   }
   &__body-inner {
     padding: 1.688em 4.250em 2.500em;
