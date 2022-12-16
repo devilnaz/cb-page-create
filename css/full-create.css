@@ -282,6 +282,7 @@
 }
 .form-create__link-file {
   color: #4A5568;
+  text-decoration: underline;
 }
 .form-create__link-file:hover {
   text-decoration: none;
@@ -341,7 +342,7 @@
   content: "";
   height: 1.333em;
   width: 1.333em;
-  background-image: url("../img/full-create/features-account_icon.svg");
+  background-image: url("/images/full-create/features-account_icon.svg");
   background-size: 100%;
   background-repeat: no-repeat;
   position: absolute;
@@ -640,7 +641,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url("../img/modules/try/try-caricature.png");
+  background-image: url("/images/modules/try/try-caricature.png");
   background-position: bottom 35% right 4.625em;
   background-repeat: no-repeat;
   background-size: 40.417% auto;

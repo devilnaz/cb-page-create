@@ -4,11 +4,11 @@ function initCounterCreate() {
   let counters = document.querySelectorAll('[data-name="counter-module"]');
   if (counters.length) {
     for (let counter of counters) {
-      getDataCounter();
+      getDataCounter(counter);
     }
   }
   
-  function getDataCounter() {
+  function getDataCounter(selector) {
     fetch(`${window.location.origin}/include/counter.php`, {
         headers: {
           'Content-type': 'application/json; charset=UTF-8'
@@ -16,14 +16,14 @@ function initCounterCreate() {
       })
     .then(response => response.json())
     .then(result => {
-        afterFetchWork(result);
+        afterFetchWork(result, selector);
     });
     
     /**
      * метод преобразует значение
      * @param принимает data в формате ["117534\/36","35681\/0"]
      */
-    function afterFetchWork(data) {
+    function afterFetchWork(data, selector) {
       
       let counterData = {};
 
@@ -35,16 +35,16 @@ function initCounterCreate() {
       counterData['licToday'] = +lic[1];
       counterData['licTotal'] = +lic[0];
       
-      startCounter(counterData);
+      startCounter(counterData, selector);
     };
     
     /**
        * метод устанавливает значения в html и запускает анимацию счетчика
        * @param приминаем data в формате {saasToday: 38, saasTotal: 117536, licToday: 0, licTotal: 35681}
        */
-      function startCounter(data) {
-        let newToday = counterData.saasToday + counterData.licToday;
-        let newTotal = counterData.saasTotal + counterData.licTotal;
+      function startCounter(data, selector) {
+        let newToday = data.saasToday + data.licToday;
+        let newTotal = data.saasTotal + data.licTotal;
         
         let oldTotal = newTotal - newToday;
         let oldToday;
@@ -54,8 +54,8 @@ function initCounterCreate() {
           oldToday = 1;
         }
         
-        let todayElem = counter.querySelector('[data-name="counter-module_today"]');
-        let totalElem = counter.querySelector('[data-name="counter-module_total"]');
+        let todayElem = selector.querySelector('[data-name="counter-module_today"]');
+        let totalElem = selector.querySelector('[data-name="counter-module_total"]');
         
         todayElem.textContent = oldToday;
         totalElem.textContent = oldTotal;
