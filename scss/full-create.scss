@@ -13,6 +13,9 @@ $browser-font-size: 16;
     max-width: 1360px;
     width: 95%;
     margin: 88px auto 0;
+    @media (max-width: 992px) {
+      margin-top: 64px;
+    }
     @media (max-width: 768px) {
       margin-top: em(64);
     }
@@ -32,6 +35,26 @@ $browser-font-size: 16;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+  }
+  &__ground-header_upper {
+    border-bottom-left-radius: 60% 56%;
+    border-bottom-right-radius: 60% 56%;
+    @media (min-width: 993px) {
+      visibility: hidden;
+      display: none;
+    }
+  }
+  &__ground-header_lower {
+    @media (max-width: 992px) {
+      visibility: hidden;
+      display: none;
+    }
+  }
+  &__try {
+    @media (max-width: 768px) {
+      margin-right: -2.5%;
+      margin-left: -2.5%;
+    }
   }
 }
 
@@ -53,6 +76,8 @@ $browser-font-size: 16;
     @media (max-width: 992px) {
       margin-right: 0;
       flex-basis: auto;
+      position: relative;
+      padding-bottom: 38px;
     }
   }
   &__features {
@@ -67,7 +92,7 @@ $browser-font-size: 16;
       flex-basis: auto;
       max-width: 548px;
       padding: 0;
-      margin-top: 88px;
+      margin-top: 64px;
     }
   }
   &__counter {
@@ -140,9 +165,6 @@ $browser-font-size: 16;
     border-radius: 0.444em;
     margin-top: 0.889em;
     color: $black;
-    @media (max-width: 768px) {
-      
-    }
   }
   &__input:first-child {
     margin-top: 0;
@@ -150,17 +172,26 @@ $browser-font-size: 16;
   &__input::placeholder {
     color: rgba($black, .4);
   }
+  &__input:focus {
+    outline: 0;
+    border: 1px solid rgb(208, 186, 101);
+    box-shadow: rgb(254 218 78) 0px 0px 10px;
+  }
   &__btn {
     font: 1em/1.362em 'open_sanssemibold';
-    padding: 0.813em;
+    padding: 0.755em;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid $main;
+    border: 2px solid $main;
     color: $white;
     border-radius: 0.500em;
     background-color: $main;
     margin-top: 1em;
     cursor: pointer;
+  }
+  &__btn:hover {
+    background-color: $white;
+    color: $main;
   }
   &__agree {
     margin: 1.846em 0 0;
@@ -178,6 +209,11 @@ $browser-font-size: 16;
 .features-account {
   font: 400 1rem 'Rubik';
   color: $black;
+  @media (max-width: 992px) {
+    border: 1px solid #DEDEDE;
+    border-radius: em(10);
+    padding: em(32) em(16) em(24);
+  }
   &__title {
     margin: 0;
     font-size: 1.500em;
@@ -268,8 +304,12 @@ $browser-font-size: 16;
 
 .company {
   font: 1rem 'Rubik';
-  color: $grey;
+  color: $black;
   padding: 4.000em 0 7.313em;
+  @media (max-width: 992px) {
+    padding-top: 0;
+    padding-bottom: em(55);
+  }
   @media (max-width: 768px) {
     padding-bottom: em(32);
   }
@@ -336,6 +376,7 @@ $browser-font-size: 16;
     padding: 1em 0;
     @media (max-width: 768px) {
       @include em(14, 19.07);
+      padding: em(20) 0;
     }
   }
   &__disclosure {
@@ -396,20 +437,34 @@ $browser-font-size: 16;
   background-image: linear-gradient(to right, #FFECB3, #ffb5aa);
   border-radius: 0.875em;
   position: relative;
+  @media (max-width: 768px) {
+    padding: em(49) 2.5%;
+    border-radius: 0;
+  }
   &__inner {
     max-width: 490px;
     position: relative;
     z-index: 10;
+    @media (max-width: 992px) {
+      text-align: center;
+      margin: 0 auto;
+    }
   }
   &__title {
     margin: 0;
     font: 500 2.500em/1.100em 'Rubik';
+    @media (max-width: 768px) {
+      @include em(24, 44);
+    }
   }
   &__text {
     margin: 0.938em 0 0;
     font-size: 1em;
     line-height: 1.500em;
     color: $grey;
+    @media (max-width: 768px) {
+      @include em(16, 24);
+    }
   }
   &__group-btns {
     margin-top: 1.875em;
@@ -418,11 +473,16 @@ $browser-font-size: 16;
     font: 400 1em/1.875em "open_sansregular";
     border-radius: 0.500em;
     min-width: 192px;
-    padding: 0.563em;
+    padding: em(8);
     margin-right: 1.875em;
-    border: 1px solid $main;
+    border: 2px solid $main;
     color: $white;
     background-color: $main;
+    @media (max-width: 768px) {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+    }
   }
   &__btn:last-child {
     margin-right: 0;
@@ -430,9 +490,22 @@ $browser-font-size: 16;
   &__btn:hover {
     cursor: pointer;
   }
+  &__btn_create:hover {
+    background-color: $white;
+    color: $main;
+  }
   &__btn_demo {
     background-color: $white;
     color: $main;
+    // padding: em(9);
+    // border: 1px solid $main;
+    @media (max-width: 768px) {
+      margin-top: em(16);
+    }
+  }
+  &__btn_demo:hover {
+    background-color: $main;
+    color: $white;
   }
   &__ground {
     position: absolute;
@@ -445,12 +518,23 @@ $browser-font-size: 16;
     background-repeat: no-repeat;
     background-size: 40.417% auto;
     z-index: 5;
+    @media (max-width: 1200px) {
+      background-size: 30% auto;
+    }
+    @media (max-width: 992px) {
+      background: none;
+      display: none;
+      visibility: hidden;
+    }
   }
 }
 
 // Слайдер
 .itc-slider {
   margin-top: 83px;
+  @media (max-width: 992px) {
+    margin-top: 36px;
+  }
   &__items {
     justify-content: center;
     @media (max-width: 576px) {
