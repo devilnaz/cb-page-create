@@ -9,7 +9,8 @@ function initCounterCreate() {
   }
   
   function getDataCounter(selector) {
-    fetch(`${window.location.origin}/include/counter.php`, {
+    
+    /* fetch(`${window.location.origin}/include/counter.php`, {
         headers: {
           'Content-type': 'application/json; charset=UTF-8'
         }
@@ -17,7 +18,13 @@ function initCounterCreate() {
     .then(response => response.json())
     .then(result => {
         afterFetchWork(result, selector);
-    });
+    }); */
+    
+    fetch('/json/counter.json')
+    .then(response => response.json())
+    .then(result => {
+        afterFetchWork(result, selector);
+    }); 
     
     /**
      * метод преобразует значение

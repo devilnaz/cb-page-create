@@ -16,16 +16,16 @@ function initAccordionModule(selector) {
           body.style.minHeight = null;
         });
         this.style.borderBottom = null;
-        this.querySelector('img').setAttribute('src', `${window.location.origin}/images/modules/accordion/accordion_plus.svg`);
+        this.querySelector('img').setAttribute('src', `${window.location.origin}/img/modules/accordion/accordion_plus.svg`);
       } else {
         bodyAll.forEach(function(body) {
           body.style.minHeight = null;
         });
         headAll.forEach(function(head) {
           head.style.borderBottom = null;
-          head.querySelector('img').setAttribute('src', `${window.location.origin}/images/modules/accordion/accordion_plus.svg`);
+          head.querySelector('img').setAttribute('src', `${window.location.origin}/img/modules/accordion/accordion_plus.svg`);
         });
-        this.querySelector('img').setAttribute('src', `${window.location.origin}/images/modules/accordion/accordion_minus.svg`);
+        this.querySelector('img').setAttribute('src', `${window.location.origin}/img/modules/accordion/accordion_minus.svg`);
         this.style.borderBottom = '1px solid #EAEAEA';
         body.style.minHeight = height + 'px';
       }

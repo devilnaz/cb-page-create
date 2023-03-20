@@ -140,6 +140,10 @@
   flex-basis: 31.177%;
   max-width: 424px;
   padding: 4.7%;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  height: -moz-min-content;
+  height: min-content;
 }
 @media (max-width: 1200px) {
   .create-account__features {
@@ -153,6 +157,8 @@
     max-width: 548px;
     padding: 0;
     margin-top: 64px;
+    background-color: transparent;
+    border-radius: 0;
   }
 }
 .create-account__counter {
@@ -248,9 +254,6 @@
 .form-create__input::-moz-placeholder {
   color: rgba(26, 32, 44, 0.4);
 }
-.form-create__input:-ms-input-placeholder {
-  color: rgba(26, 32, 44, 0.4);
-}
 .form-create__input::placeholder {
   color: rgba(26, 32, 44, 0.4);
 }
@@ -342,7 +345,7 @@
   content: "";
   height: 1.333em;
   width: 1.333em;
-  background-image: url("/images/full-create/features-account_icon.svg");
+  background-image: url("/img/full-create/features-account_icon.svg");
   background-size: 100%;
   background-repeat: no-repeat;
   position: absolute;
@@ -516,9 +519,6 @@
 }
 .accordion-module__body-inner {
   padding: 1.688em 4.25em 2.5em;
-  max-width: 732px;
-  width: 100%;
-  box-sizing: border-box;
 }
 @media (max-width: 768px) {
   .accordion-module__body-inner {
@@ -530,6 +530,9 @@
 }
 .accordion-module__text-body {
   margin: 0;
+  max-width: 732px;
+  width: 100%;
+  box-sizing: border-box;
   font: 1.125em/1.362em "open_sansregular";
 }
 @media (max-width: 768px) {
@@ -641,7 +644,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url("/images/modules/try/try-caricature.png");
+  background-image: url("/img/modules/try/try-caricature.png");
   background-position: bottom 35% right 4.625em;
   background-repeat: no-repeat;
   background-size: 40.417% auto;
@@ -725,8 +728,8 @@
 }
 @media (max-width: 992px) {
   .itc-slider .company__wrapper-img-slide {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10px;
+    margin-right: 10px;
     border: 1px solid #DEDEDE;
     box-sizing: border-box;
     border-radius: 9px;
