@@ -20,7 +20,7 @@ function initCounterCreate() {
         afterFetchWork(result, selector);
     }); */
     
-    fetch('./../json/counter.json')
+    fetch(`${window.location.href}/json/counter.json`)
     .then(response => response.json())
     .then(result => {
         afterFetchWork(result, selector);
